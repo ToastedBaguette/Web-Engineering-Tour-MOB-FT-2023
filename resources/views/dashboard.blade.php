@@ -25,13 +25,13 @@
             text-align: center;
             position: relative;
             width: 700px;
-            height: 495px;
+            height: 417;
             background-color: #57c1e5;
         }
 
         .map_image {
             width: 700px;
-            height: 495px;
+            height: 417px;
         }
 
         .point {
@@ -39,55 +39,55 @@
         }
 
         #ta-bw {
-            width: 77px;
+            width: 83px;
             height: auto;
-            bottom: 149px;
-            left: 301.3px;
+            bottom: 113px;
+            left: 289.3px;
         }
 
         #tb-bw {
-            width: 91px;
+            width: 100px;
             height: auto;
-            bottom: 177px;
-            right: 238px;
+            bottom: 143px;
+            right: 236px;
         }
 
         #tc-bw {
-            width: 98px;
+            width: 107px;
             height: auto;
-            top: 201px;
-            right: 148px;
+            top: 146px;
+            right: 139px;
             z-index: 1;
         }
 
         #td-bw {
-            width: 70px;
+            width: 77px;
             height: auto;
-            top: 153px;
-            right: 155px;
+            top: 94px;
+            right: 146px;
             /* z-index: 1; */
         }
 
         #te-bw {
-            width: 121px;
+            width: 129px;
             height: auto;
-            top: 151px;
-            right: 234px;
+            top: 92px;
+            right: 233px;
             z-index: 1;
         }
 
         #tf-bw {
-            width: 130px;
+            width: 142px;
             height: auto;
-            bottom: 197px;
-            left: 225px;
+            bottom: 165px;
+            left: 205px;
         }
 
         #tg-bw {
-            width: 99px;
+            width: 108px;
             height: auto;
-            top: 80px;
-            right: 231px;
+            top: 15px;
+            right: 228px;
         }
 
         .blocker {
@@ -125,9 +125,9 @@
 
     <section class="map-section">
         <h1 class="title">Engineering Tour</h1>
-        <div class="container-fluid my-0 d-flex justify-content-center">
+        <div class="container-fluid my-0 d-flex justify-content-center my-4">
             <div class="map-container">
-                <img src="{{ asset('../images/assets_gedung/map_rgb.png') }}" class="map_image" alt="">
+                <img src="{{ asset('../images/assets_gedung/map_rgb_cropped.png') }}" class="map_image" alt="">
                 <img src="{{ asset('../images/assets_gedung/bw/TA_bw.png') }}" alt="" class="point" id="ta-bw">
                 <img src="{{ asset('../images/assets_gedung/bw/TB_bw.png') }}" alt="" class="point" id="tb-bw">
                 <img src="{{ asset('../images/assets_gedung/bw/TC_bw.png') }}" alt="" class="point" id="tc-bw">
