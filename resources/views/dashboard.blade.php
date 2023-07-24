@@ -1,8 +1,10 @@
 @extends('layouts.app')
 
 @section('css')
+    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
     <style type="text/css">
         /* 40128b */
+
 
         body {
             background: #57c1e5;
@@ -91,13 +93,20 @@
         }
 
         .blocker {
-            display: none ;
+            display: none;
         }
 
+        .broken-console {
+            font-family: 'Broken Console', sans-serif !important;
+        }
+
+
+
         @media screen and (orientation: portrait) {
-            .map-section{
+            .map-section {
                 display: none;
             }
+
             .blocker {
                 display: flex;
                 align-items: center;
@@ -112,6 +121,34 @@
                 color: #ffffff;
             }
         }
+
+        .nes-input {
+            width: 400px;
+            border-image-repeat: stretch !important;
+            background-clip: unset !important;
+            border-width: 6px !important;
+            height: 40px;
+
+        }
+
+        .nes-dialog.is-rounded, .nes-btn,.nes-textarea {
+            border-image-repeat: stretch !important;
+        }
+        .nes-btn{
+            font-family: 'Broken Console', sans-serif !important;
+        }
+
+        #dialog-rounded {
+            height: 400px;
+            overflow-y: auto;
+            min-width: 400px;
+            max-width: 700px;
+            overflow-y: auto; 
+        }
+
+        #answer{
+            height: 80px;
+        }
     </style>
 @endsection
 
@@ -125,18 +162,65 @@
 
     <section class="map-section">
         <h1 class="title">Engineering Tour</h1>
-        <div class="container-fluid my-0 d-flex justify-content-center my-4">
-            <div class="map-container">
-                <img src="{{ asset('../images/assets_gedung/map_rgb_cropped.png') }}" class="map_image" alt="">
-                <img src="{{ asset('../images/assets_gedung/bw/TA_bw.png') }}" alt="" class="point" id="ta-bw">
-                <img src="{{ asset('../images/assets_gedung/bw/TB_bw.png') }}" alt="" class="point" id="tb-bw">
-                <img src="{{ asset('../images/assets_gedung/bw/TC_bw.png') }}" alt="" class="point" id="tc-bw">
-                <img src="{{ asset('../images/assets_gedung/bw/TD_bw.png') }}" alt="" class="point" id="td-bw">
-                <img src="{{ asset('../images/assets_gedung/bw/TE_bw.png') }}" alt="" class="point" id="te-bw">
-                <img src="{{ asset('../images/assets_gedung/bw/TF_bw.png') }}" alt="" class="point" id="tf-bw">
-                <img src="{{ asset('../images/assets_gedung/bw/TG_bw.png') }}" alt="" class="point" id="tg-bw">
+        <div class="container-fluid my-0 my-4">
+            <div class="row">
+                <div class="col  d-flex justify-content-center">
+                    <div class="map-container">
+                        <img src="{{ asset('../images/assets_gedung/map_rgb_cropped.png') }}" class="map_image"
+                            alt="">
+                        <img src="{{ asset('../images/assets_gedung/bw/TA_bw.png') }}" alt="" class="point"
+                            id="ta-bw">
+                        <img src="{{ asset('../images/assets_gedung/bw/TB_bw.png') }}" alt="" class="point"
+                            id="tb-bw">
+                        <img src="{{ asset('../images/assets_gedung/bw/TC_bw.png') }}" alt="" class="point"
+                            id="tc-bw">
+                        <img src="{{ asset('../images/assets_gedung/bw/TD_bw.png') }}" alt="" class="point"
+                            id="td-bw">
+                        <img src="{{ asset('../images/assets_gedung/bw/TE_bw.png') }}" alt="" class="point"
+                            id="te-bw">
+                        <img src="{{ asset('../images/assets_gedung/bw/TF_bw.png') }}" alt="" class="point"
+                            id="tf-bw">
+                        <img src="{{ asset('../images/assets_gedung/bw/TG_bw.png') }}" alt="" class="point"
+                            id="tg-bw">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row  d-flex justify-content-center">
+                <div class="col d-flex justify-content-center">
+                    <div class="password-wrapper d-flex justify-content-center">
+                        <div class="nes-field">
+                            <label for="input-password" class="broken-console">Password: </label>
+                            <input type="text" id="input-password" class="nes-input broken-console">
+                        </div>
+                        <div class="check-section d-flex align-items-end px-3">
+                            <button type="button" class="nes-btn is-primary" style="height: " onclick="document.getElementById('dialog-question').showModal();">
+                                Check
+                            </button>
+                        </div>
+                        
+                    </div>
+                </div>
 
             </div>
+
+            <section>
+                <dialog class="nes-dialog is-rounded" id="dialog-question">
+                    <form method="dialog">
+                        <p class="title">Ini Judul</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, soluta eaque? Vero quis aut
+                            voluptate. Architecto sequi tempore quos, dolore delectus ipsa unde vel voluptates voluptatem
+                            dolor? Corrupti, magni expedita.</p>
+                        <textarea id="answer" class="nes-textarea"></textarea>
+                        <menu class="dialog-menu">
+                            <button class="nes-btn">Cancel</button>
+                            <button class="nes-btn is-primary">Confirm</button>
+                        </menu>
+                    </form>
+                </dialog>
+            </section>
+
 
         </div>
     </section>
