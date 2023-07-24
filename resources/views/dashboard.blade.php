@@ -195,7 +195,8 @@
                             <input type="text" id="input-password" class="nes-input broken-console">
                         </div>
                         <div class="check-section d-flex align-items-end px-3">
-                            <button type="button" class="nes-btn is-primary" style="height: " onclick="document.getElementById('dialog-question').showModal();">
+                            <button type="button" class="nes-btn is-primary" style="height: " onclick="checkPass()">
+                            {{-- document.getElementById('dialog-question').showModal(); --}}
                                 Check
                             </button>
                         </div>
@@ -224,4 +225,24 @@
 
         </div>
     </section>
+@endsection
+
+@section('script')
+<script type="text/javascript">
+    const checkPass = () => {
+        let pass = $('#input-password').val().toUpperCase()
+
+        $.ajax({
+            type: 'POST',
+            url: '{{ route("check.pass") }}',
+            data: {
+                '_token': '<?php echo csrf_token(); ?>',
+                'pass': pass,
+            },
+            success: function(data) {
+                alert(data.msg)
+            }
+        })
+    }
+</script>
 @endsection
