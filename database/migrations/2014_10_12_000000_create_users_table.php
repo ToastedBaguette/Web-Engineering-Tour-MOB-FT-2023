@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('group')->nullable();
             $table->string('role');
-            $table->string('current_pos');
+            $table->string('current_pos')->nullable();
             $table->timestamps();
         });
     }
