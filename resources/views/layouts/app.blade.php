@@ -1,5 +1,3 @@
-
-
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -31,12 +29,26 @@
 
         /* font-family: '04b', sans-serif; */
         /* font-family: 'Broken Console', sans-serif; */
-        *{
+        * {
             font-family: 'Montserrat', sans-serif;
         }
 
-        body{
+        body {
             background: #120238;
+        }
+
+        .title {
+            font-family: '04b', sans-serif;
+            text-align: center;
+            color: #40128b;
+            font-size: 36px;
+        }
+
+        #btn-logout{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 2;
         }
     </style>
     @yield('css')
@@ -97,6 +109,12 @@
                 </div>
             </div>
         </nav> --}}
+
+        <button class="nes-btn is-error" id="btn-logout" href="{{ route('logout') }}"  onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Logout') }}</button>
+
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+            @csrf
+        </form>
 
         <main class="py-5">
             @yield('content')

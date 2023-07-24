@@ -11,12 +11,7 @@
         }
 
 
-        .title {
-            font-family: '04b', sans-serif;
-            text-align: center;
-            color: #40128b;
-            font-size: 36px;
-        }
+        
 
         .rotate-phone-text {
             font-family: 'Broken Console', sans-serif;

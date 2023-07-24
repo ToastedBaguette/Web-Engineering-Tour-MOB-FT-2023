@@ -21,6 +21,10 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 });
 
+Route::get('/rekap', function () {
+    return view('rekap');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
