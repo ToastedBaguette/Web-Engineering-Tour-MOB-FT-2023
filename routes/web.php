@@ -15,12 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-});
 
 Route::get('/rekap', function () {
     return view('rekap');
@@ -29,4 +26,6 @@ Route::get('/rekap', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/dashboard', 'TourController@dashboard')->name('dashboard');
 Route::post('/check-pass', 'TourController@checkPass')->name('check.pass');
+Route::post('/submit-answers', 'TourController@submitAnswers')->name('submit.answers');

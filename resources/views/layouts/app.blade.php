@@ -117,11 +117,13 @@
             </div>
         </nav> --}}
 
-        <button class="nes-btn is-error" id="btn-logout" href="{{ route('logout') }}"  onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Logout') }}</button>
+        @if(Auth::check())
+            <button class="nes-btn is-error" id="btn-logout" href="{{ route('logout') }}"  onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Logout') }}</button>
 
-        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-            @csrf
-        </form>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                @csrf
+            </form>
+        @endif
 
         <main class="py-5">
             @yield('content')
