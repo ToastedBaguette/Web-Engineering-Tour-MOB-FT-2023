@@ -15,7 +15,7 @@ class Question extends Model
 
     public function answers()
     {
-        return $this->belongsToMany(User::class, 'inventory', 'question_id', 'user_id')
+        return $this->belongsToMany(User::class, 'answers', 'question_id', 'user_id')
             ->withPivot(['pos_id', 'answer']);
     }
 }

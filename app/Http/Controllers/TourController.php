@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Pos;
 use App\Question;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -22,11 +23,27 @@ class TourController extends Controller
         return view('dashboard', compact('pos'));
     }
 
+    function rekap() {
+        $students = User::where('role','Student')->get();
+        $groups = ['--Show All--'];
+        foreach ($students as $value) {
+            if(!array_search($value->group,$groups)){
+                array_push($groups, $value->group);
+            }
+        }
+        // $students = User::first();
+        // $pos = Pos::where("password","AAAAA")->question()->first();
+        // $answers = $students[0]->answers()->get();
+        // dd($answers[3]->pivot->answer);
+        return view('rekap', compact('groups','students'));
+    }
+
     function checkPass(Request $request) {
         $pass = $request->pass;
         $user_id = Auth::user()->id;
         $pos = Pos::where("password",$pass)->first();
         $questions = [];
+        $name = "";
         if($pos != null){
             $answers = DB::table('answers')->where('user_id', $user_id)->where('pos_id', $pos->id)->get();
             if(count($answers) == 0){
@@ -35,6 +52,7 @@ class TourController extends Controller
                 foreach ($res as $value) {
                     array_push($questions, $value->question);
                 }
+                $name = $pos->name;
             }else{
                 $msg = "INVALID";
             }
@@ -43,7 +61,7 @@ class TourController extends Controller
         }
 
         return response()->json(array(
-            'pos' => $pos->name,
+            'pos' => $name,
             'questions' => $questions,
             'msg' => $msg
         ), 200);

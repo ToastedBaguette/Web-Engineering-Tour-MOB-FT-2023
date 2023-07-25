@@ -39,11 +39,10 @@
         </div>
         <div class="container-fluid px-5">
             <label for="select-team">Nama Kelompok :</label>
-            <select name="select-team" id="">
-                <option value="">--Pilih Kelompok--</option>
-                @for ($i = 1; $i <= 10; $i++)
-                    <option value="">Kelompok {{ $i }}</option>
-                @endfor
+            <select name="select-team" id="select-team" onchange="changeGroup()">
+                @foreach ($groups as $group)
+                    <option value="{{ $group }}">{{ $group }}</option>
+                @endforeach
             </select>
             <div class="table-responsive">
                 <table class="table table-striped table-bordered">
@@ -57,15 +56,32 @@
                         </tr>
                     </thead>
                     <tbody class="table-group-divider">
-                        @for ($i = 1; $i <= 14; $i++)
+                        @foreach ($students as $student)
                         <tr>
-                            <td scope="row">160421023</td>
-                            @for ($j = 1; $j <= 20; $j++)
-                                <td class="no-soal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro modi aut optio aspernatur deserunt praesentium fugit iste adipisci quo repudiandae, voluptatibus soluta iure ex cupiditate vitae commodi id mollitia repellat! </td>
-                            @endfor
-
+                            <td scope="row">{{ $student->username }}</td>
+                            @php
+                                $counter = 1;    
+                            @endphp
+                            @foreach ($student->answers as $ans)
+                                @while($ans->pivot->question_id != $counter) 
+                                    <td class="no-soal"></td>
+                                    @php
+                                        $counter += 1;    
+                                    @endphp
+                                @endwhile
+                                <td class="no-soal">{{ $ans->pivot->answer}}</td>
+                                @php
+                                    $counter += 1;    
+                                @endphp
+                            @endforeach
+                            @while($counter != 21) 
+                                <td class="no-soal"></td>
+                                @php
+                                    $counter += 1;    
+                                @endphp
+                            @endwhile
                         </tr>
-                        @endfor
+                        @endforeach
                         
 
                     </tbody>
@@ -74,4 +90,13 @@
 
         </div>
     </section>
+@endsection
+
+@section('script')
+<script type="text/javascript">
+    const changeGroup = () => {
+        let a = $('#select-team').val()
+        
+    }
+</script>
 @endsection

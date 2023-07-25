@@ -19,13 +19,10 @@ Route::get('/', function () {
 });
 
 
-Route::get('/rekap', function () {
-    return view('rekap');
-});
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/rekap', 'TourController@rekap')->name('rekap');
 Route::get('/dashboard', 'TourController@dashboard')->name('dashboard');
 Route::post('/check-pass', 'TourController@checkPass')->name('check.pass');
 Route::post('/submit-answers', 'TourController@submitAnswers')->name('submit.answers');

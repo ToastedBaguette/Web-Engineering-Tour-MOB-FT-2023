@@ -10,9 +10,6 @@
             background: #57c1e5;
         }
 
-
-        
-
         .rotate-phone-text {
             font-family: 'Broken Console', sans-serif;
         }
@@ -269,9 +266,9 @@
                     alert("Sorry, you already finished this section")
                 }
                 else{
+                    alert("Oops, wrong password")
                     $('#input-password').val("")
                     $('#input-password').focus()
-                    alert("Oops, wrong password")
                 }
             }
         })
