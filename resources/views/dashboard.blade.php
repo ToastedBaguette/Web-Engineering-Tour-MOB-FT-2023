@@ -19,7 +19,7 @@
             text-align: center;
             position: relative;
             width: 700px;
-            height: 417;
+            height: 417px;
             background-color: #57c1e5;
         }
 
