@@ -1,4 +1,8 @@
 id,name,password
-1,Pos A,AAAAA
-2,Pos B,BBBBB
-3,Pos C,CCCCC
+1,Gedung TA,MOBETA
+2,Gedung TB,MOBETB
+3,Gedung TC,MOBETC
+4,Gedung TD,MOBETD
+5,Gedung TE,MOBETE
+6,Gedung TF,MOBETF
+7,Gedung TG,MOBETG

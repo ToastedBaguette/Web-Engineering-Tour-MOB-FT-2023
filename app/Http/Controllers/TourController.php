@@ -24,7 +24,7 @@ class TourController extends Controller
     }
 
     function rekap() {
-        $students = User::where('role','Student')->get();
+        $students = User::where('role','Student')->orderBy('group')->get();
         $groups = ['--Show All--'];
         foreach ($students as $value) {
             if(!array_search($value->group,$groups)){

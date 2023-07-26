@@ -17,12 +17,12 @@ class UserSeeder extends Seeder
     {
        
 
-        $csvFile = fopen(base_path("database/data/1-user.csv"), "r");
+        $csvFile = fopen(base_path("database/data/1-user1.csv"), "r");
 
         $firstline = true;
 
         $arrNamaColumn = [];
-        while (($data = fgetcsv($csvFile, 2000, ",")) !== FALSE) {
+        while (($data = fgetcsv($csvFile, 2000, ";")) !== FALSE) {
             if ($firstline) {
                 foreach ($data as $idx => $namaColumn) {
                     array_push($arrNamaColumn, $namaColumn);
