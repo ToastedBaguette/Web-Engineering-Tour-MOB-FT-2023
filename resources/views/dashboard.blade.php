@@ -337,7 +337,7 @@
     <script type="text/javascript">
         let questions = []
         let current = 0
-        let answers = ['', '', '', '']
+        let answers = ['', '', '']
         let pos = "";
 
         const checkPass = () => {
