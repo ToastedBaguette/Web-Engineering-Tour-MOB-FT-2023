@@ -20,7 +20,7 @@
         }
 
         .table{
-            width: 8100px;
+            width: 8200px;
             
         }
 
@@ -38,17 +38,13 @@
             <h1 class="title">Rekap</h1>
         </div>
         <div class="container-fluid px-5">
-            <label for="select-team">Nama Kelompok :</label>
-            <select name="select-team" id="select-team" onchange="changeGroup()">
-                @foreach ($groups as $group)
-                    <option value="{{ $group }}">{{ $group }}</option>
-                @endforeach
-            </select>
+            
             <div class="table-responsive">
                 <table class="table table-striped table-bordered">
                     <thead class="table-dark">
                         <tr>
-                            <th scope="col">NRP/Soal</th>
+                            <th scope="col">NRP</th>
+                            <th style="width:100px;">Kelompok</th>
                             @for ($i = 1; $i <= 20; $i++)
                                 <th class="no-soal" style="text-align:center">{{ $i }}</th>
                             @endfor
@@ -59,6 +55,7 @@
                         @foreach ($students as $student)
                         <tr>
                             <td scope="row">{{ $student->username }}</td>
+                            <td>{{$student->group}}</td>
                             @php
                                 $counter = 1;    
                             @endphp
