@@ -20,10 +20,21 @@ Route::get('/', function () {
 
 
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/rekap', 'TourController@rekap')->name('rekap');
-Route::get('/dashboard', 'TourController@dashboard')->name('dashboard');
-Route::post('/check-pass', 'TourController@checkPass')->name('check.pass');
-Route::post('/submit-answers', 'TourController@submitAnswers')->name('submit.answers');
-Route::post('/change-group', 'TourController@changeGroup')->name('change.group');
+
+// Student
+Route::group(['middleware' => ['auth', 'student']],
+    function () {
+        Route::get('/dashboard', 'TourController@dashboard')->name('dashboard');
+        Route::post('/check-pass', 'TourController@checkPass')->name('check.pass');
+        Route::post('/submit-answers', 'TourController@submitAnswers')->name('submit.answers');
+    }
+);
+
+// Admin
+Route::group(['middleware' => ['auth', 'admin']],
+    function () {
+        Route::get('/rekap', 'TourController@rekap')->name('rekap');
+        Route::post('/change-group', 'TourController@changeGroup')->name('change.group');
+    }
+);
