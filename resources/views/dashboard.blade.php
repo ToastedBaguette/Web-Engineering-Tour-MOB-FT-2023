@@ -316,11 +316,11 @@
                     <textarea id="answer" class="nes-textarea"></textarea>
                     <div class="dialog-menu">
                         <div class="back-next">
-                            <button class="nes-btn" id="back" onclick="back()">Back</button>
+                            <button class="nes-btn hidden" id="back" onclick="back()">Back</button>
                             <button class="nes-btn" id="next" onclick="next()">Next</button>
                         </div>
                         <div class="confirm-section">
-                            <button class="nes-btn is-primary" id="confirm" onclick="submit()">Confirm</button>
+                            <button class="nes-btn is-primary hidden" id="confirm" onclick="submit()">Confirm</button>
                         </div>
 
                     </div>
@@ -337,7 +337,7 @@
     <script type="text/javascript">
         let questions = []
         let current = 0
-        let answers = ['', '', '']
+        let answers = ['', '', '', '']
         let pos = "";
 
         const checkPass = () => {
@@ -359,7 +359,6 @@
                         $('#titles').text(pos + " (" + (current + 1) + ")")
                         questions = data.questions
                         $('#quest').text(questions[current])
-                        $('#back').attr('disabled', true)
                     } else if (data.msg == "INVALID") {
                         $('#input-password').val("")
                         $('#input-password').focus()
@@ -376,16 +375,21 @@
         const next = () => {
             $('#answer').focus()
             answers[current] = $('#answer').val()
-            if (current != (questions.length - 1)) {
-                current += 1
-                $('#answer').val(answers[current])
-                $('#titles').text(pos + " (" + (current + 1) + ")")
-            }
+
+            current += 1
+            $('#answer').val(answers[current])
+            $('#titles').text(pos + " (" + (current + 1) + ")")
             $('#quest').text(questions[current])
-            if (current != 0) {
-                $('#back').removeAttr('disabled')
+
+            if(current == questions.length -1){
+                $('#next').addClass("hidden")
+                $('#confirm').removeClass("hidden")
+            }
+
+            if (current == 0) {
+                $('#back').addClass("hidden")
             } else {
-                $('#back').attr('disabled', true)
+                $('#back').removeClass("hidden")
             }
 
         }
@@ -393,16 +397,20 @@
         const back = () => {
             $('#answer').focus()
             answers[current] = $('#answer').val()
-            if (current != 0) {
-                current -= 1
-                $('#answer').val(answers[current])
-                $('#titles').text(pos + " (" + (current + 1) + ")")
-            }
+            current -= 1
+            $('#answer').val(answers[current])
+            $('#titles').text(pos + " (" + (current + 1) + ")")
             $('#quest').text(questions[current])
-            if (current == (questions.length - 1)) {
-                $('#next').attr('disabled', true)
+
+            if(current != (questions.length)){
+                $('#next').removeClass("hidden")
+                $('#confirm').addClass("hidden")
+            }
+
+            if (current == 0) {
+                $('#back').addClass("hidden")
             } else {
-                $('#next').removeAttr('disabled')
+                $('#back').removeClass("hidden")
             }
 
         }
