@@ -38,6 +38,19 @@ class TourController extends Controller
         return view('rekap', compact('groups','students'));
     }
 
+    function changeGroup(Request $request) {
+        $group = $request->group;
+        if($group == '--Show All--'){
+            $students = User::where('role','Student')->get();
+        }else{
+            $students = User::where('role','Student')->where('group',$group)->get();
+        }
+        // var_dump($students[0]);
+        return response()->json(array(
+            'students' => $students
+        ), 200);
+    }
+
     function checkPass(Request $request) {
         $pass = $request->pass;
         $user_id = Auth::user()->id;
@@ -87,4 +100,6 @@ class TourController extends Controller
             'msg' => "Congratulations, you have finished " . $pos->name
         ), 200);
     }
+
+
 }

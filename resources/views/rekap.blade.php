@@ -55,7 +55,7 @@
 
                         </tr>
                     </thead>
-                    <tbody class="table-group-divider">
+                    <tbody class="table-group-divider" id="content">
                         @foreach ($students as $student)
                         <tr>
                             <td scope="row">{{ $student->username }}</td>
@@ -74,7 +74,7 @@
                                     $counter += 1;    
                                 @endphp
                             @endforeach
-                            @while($counter != 21) 
+                            @while($counter < 21) 
                                 <td class="no-soal"></td>
                                 @php
                                     $counter += 1;    
@@ -94,9 +94,46 @@
 
 @section('script')
 <script type="text/javascript">
-    const changeGroup = () => {
-        let a = $('#select-team').val()
+    // const changeGroup = () => {
+    //     let group = $('#select-team').val()
+
+    //     let content = document.getElementById('content')
+    //     content.innerHTML = ''
         
-    }
+    //     $.ajax({
+    //         type: 'GET',
+    //         url: '{{ route("rekap") }}',
+    //         data: {
+    //             '_token': '<?php echo csrf_token(); ?>',
+    //             'group': group,
+    //         },
+    //         success: function(data) {
+    //             data.students.forEach(student => {
+    //                 let counter = 1
+    //                 let data = ""
+    //                 // alert(student.group)
+    //                 let a = student.answers
+    //                 console.log(a)
+    //                 student.answers.forEach(ans => {
+    //                     while (ans.pivot.question_id != counter) {
+    //                         data += '<td class="no-soal"></td>'
+    //                         counter += 1
+    //                     }
+    //                     data += `<td class="no-soal">${ans.pivot.answer}</td>`
+    //                     counter += 1
+    //                 });
+
+    //                 while (counter < 21) {
+    //                     data += '<td class="no-soal"></td>'
+    //                     counter += 1
+    //                 }
+
+    //                 content.innerHTML += `<tr>`
+    //                 content.innerHTML += data        
+    //                 content.innerHTML += `</tr>`
+    //             })
+    //         }
+    //     })
+    // }
 </script>
 @endsection

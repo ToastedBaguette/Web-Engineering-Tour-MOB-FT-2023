@@ -26,3 +26,4 @@ Route::get('/rekap', 'TourController@rekap')->name('rekap');
 Route::get('/dashboard', 'TourController@dashboard')->name('dashboard');
 Route::post('/check-pass', 'TourController@checkPass')->name('check.pass');
 Route::post('/submit-answers', 'TourController@submitAnswers')->name('submit.answers');
+Route::post('/change-group', 'TourController@changeGroup')->name('change.group');

@@ -326,12 +326,12 @@
                     '_token': '<?php echo csrf_token(); ?>',
                 'pass': pass,
                 'answers': answers,
-            },
-            success: function(data) {
-                alert(data.msg)
-                location.reload()
-            }
-        })
+                },
+                success: function(data) {
+                    alert(data.msg)
+                    location.reload()
+                }
+            })
         }
     }
 </script>
