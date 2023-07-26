@@ -20,7 +20,7 @@
         }
 
         .table{
-            width: 8200px;
+            width: 9000px;
             
         }
 
@@ -45,7 +45,7 @@
                         <tr>
                             <th scope="col">NRP</th>
                             <th style="width:100px;">Kelompok</th>
-                            @for ($i = 1; $i <= 20; $i++)
+                            @for ($i = 1; $i <= 22; $i++)
                                 <th class="no-soal" style="text-align:center">{{ $i }}</th>
                             @endfor
 
@@ -72,7 +72,7 @@
                                     $counter += 1;    
                                 @endphp
                             @endforeach
-                            @while($counter < 21) 
+                            @while($counter < 23) 
                                 <td class="no-soal"></td>
                                 @php
                                     $counter += 1;    
