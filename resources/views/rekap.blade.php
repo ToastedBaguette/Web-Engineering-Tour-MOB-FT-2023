@@ -68,6 +68,7 @@
                                     @php
                                         $counter += 1;    
                                     @endphp
+                                
                                 @endwhile
                                 <td class="no-soal">{{ $ans->pivot->answer}}</td>
                                 @php

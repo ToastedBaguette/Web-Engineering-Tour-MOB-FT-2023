@@ -31,6 +31,10 @@ class TourController extends Controller
                 array_push($groups, $value->group);
             }
         }
+
+        // $ans = User::with('answers')->get();
+        // dd($ans[2]->answers[1]->pivot->answer);
+        // dd($ans);
         // $students = User::first();
         // $pos = Pos::where("password","AAAAA")->question()->first();
         // $answers = $students[0]->answers()->get();
