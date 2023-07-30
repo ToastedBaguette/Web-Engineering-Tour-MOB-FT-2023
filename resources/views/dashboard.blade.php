@@ -26,7 +26,7 @@
         <img src="{{ asset('../images/assets_gedung/bird.png') }}" id="bird-1" alt=""> --}}
         <h1 class="title" style="z-index:5">Engineering Tour</h1>
         <div class="container-fluid my-0 my-4">
-            <div class="row">
+            <div class="row my-5">
                 <div class="col  d-flex justify-content-center">
                     <div class="map-container">
                         <img src="{{ asset('../images/assets_gedung/map_rgb_cropped.png') }}" class="map_image"
@@ -63,12 +63,12 @@
                 </div>
             </div>
 
-            <div class="row  d-flex justify-content-center">
+            <div class="row  d-flex justify-content-center my-4">
                 <div class="col d-flex justify-content-center">
                     <div class="password-wrapper d-flex justify-content-center">
                         <div class="nes-field">
                             <label for="input-password" class="broken-console">Password: </label>
-                            <input type="text" id="input-password" class="nes-input broken-console" maxlength="6">
+                            <input type="text" id="input-password" class="nes-input broken-console" maxlength="7">
                         </div>
                         <div class="check-section d-flex align-items-end px-3">
                             <button type="button" class="nes-btn is-primary" style="height: " onclick="checkPass()">
