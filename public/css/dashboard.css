@@ -1,0 +1,229 @@
+body {
+    background: #57c1e5;
+}
+
+.rotate-phone-text {
+    font-family: 'Broken Console', sans-serif;
+}
+
+.map-container {
+    text-align: center;
+    position: relative;
+    width: 400px;
+    height: auto;
+    background-color: #57c1e5;
+    z-index: 0;
+    overflow-x: auto;
+}
+
+.map_image {
+    width: 450px;
+    height: auto;
+}
+
+.point {
+    position: absolute;
+}
+
+#ta-bw {
+    width: 56px;
+    height: auto;
+    bottom: 72px;
+    left: 184px;
+}
+
+#tb-bw {
+    width: 64px;
+    height: auto;
+    bottom: 93px;
+    left: 234px;
+}
+
+#tc-bw {
+    width: 68px;
+    height: auto;
+    top: 94px;
+    left: 293px;
+
+}
+
+#td-bw {
+    width: 48px;
+    height: auto;
+    top: 61px;
+    left: 308px;
+    /* z-index: 1; */
+}
+
+#te-bw {
+    width: 87px;
+    height: auto;
+    top: 58px;
+    left: 215px;
+    z-index: 1;
+}
+
+#tf-bw {
+    width: 91px;
+    height: auto;
+    bottom: 106px;
+    left: 132px;
+}
+
+#tg-bw {
+    width: 69px;
+    height: auto;
+    top: 10px;
+    left: 234px;
+}
+
+.blocker {
+    display: none;
+}
+
+.broken-console {
+    font-family: 'Broken Console', sans-serif !important;
+}
+
+.dialog-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+/* @media screen and (orientation: portrait) {
+    .map-section {
+        display: none;
+    }
+
+    .blocker {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #000;
+        z-index: 1000;
+        color: #ffffff;
+    }
+} */
+
+.nes-input {
+    width: 200px;
+    border-image-repeat: stretch !important;
+    background-clip: unset !important;
+    border-width: 6px !important;
+    height: 30px;
+
+}
+
+.nes-dialog.is-rounded,
+.nes-btn,
+.nes-textarea {
+    border-image-repeat: stretch !important;
+}
+
+.nes-btn {
+    font-family: 'Broken Console', sans-serif !important;
+    height: 30px;
+    font-size: 14px;
+    padding: 0 6px;
+}
+
+#dialog-rounded {
+    height: 400px;
+    overflow-y: auto;
+    min-width: 400px;
+    max-width: 700px;
+    overflow-y: auto;
+}
+
+#answer {
+    height: 80px;
+}
+
+#awan-1 {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    top: 20px;
+    left: 60px;
+    z-index: -1;
+    animation: awan1 2s infinite ease-in-out;
+}
+
+#awan-3{
+    position: absolute;
+    width: 180px;
+    height: auto;
+    top: 50px;
+    right: 60px;
+    z-index: -1;
+    animation: awan1 2s infinite ease-in-out;
+}
+
+#awan-5{
+    position: absolute;
+    width: 150px;
+    height: auto;
+    top: 50px;
+    left: 40px;
+    z-index: 2;
+    animation: awan1 2s infinite ease-in-out;
+}
+
+#bird-1 {
+    position: absolute;
+    width: 50px;
+    top: 20px;
+    left: -20px;
+    transform: translateX(-30px);
+    animation: angrybird 2s infinite linear;
+    z-index: -2;
+}
+
+.hidden{
+    display: none;
+}
+
+@keyframes awan1{
+    0% {
+        transform: translate(0, 0px);
+    }
+
+    50% {
+        transform: translate(0, 5px);
+    }
+
+    100% {
+        transform: translateY(0, -0px);
+    }
+}
+
+@keyframes angrybird {
+
+    0% {
+        transform: translate(0, 0px);
+    }
+
+    25%{
+        transform: translate(30px, 15px);
+    }
+
+    50% {
+        transform: translate(60px, 0px);
+    }
+
+    75%{
+        transform: translate(90px, 15px);
+    }
+
+    100% {
+        transform: translate(120px, -0px);
+    }
+}
