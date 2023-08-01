@@ -15,17 +15,17 @@
 
     <section class="map-section">
         <div class="space">
-            <img src="{{ asset('../images/assets_spacecraft/spacecraft'.$count.'.png') }}" id="spacecraft" alt="">
+            <img src="{{ asset('../images/assets_spacecraft/spacecraft' . $count . '.png') }}" id="spacecraft" alt="">
         </div>
         {{-- <img src="{{ asset('../images/assets_gedung/awan-1.png') }}" id="awan-1" alt="">
         <img src="{{ asset('../images/assets_gedung/awan-3.png') }}" id="awan-3" alt="">
-        <img src="{{ asset('../images/assets_gedung/awan-5.png') }}" id="awan-5" alt="">--}}
+        <img src="{{ asset('../images/assets_gedung/awan-5.png') }}" id="awan-5" alt=""> --}}
         {{-- <img src="{{ asset('../images/assets_gedung/bird.png') }}" id="bird-1" alt=""> --}}
         <h1 class="title" style="z-index:5">Engineering Tour</h1>
         <div class="container-fluid my-0 my-4">
             <div class="row my-5">
                 <div class="col  d-flex justify-content-center">
-                    
+
                     <div class="map-container">
                         <img src="{{ asset('../images/assets_gedung/map_rgb_cropped.png') }}" class="map_image"
                             alt="">
@@ -57,7 +57,7 @@
                             <img src="{{ asset('../images/assets_gedung/bw/TG_bw.png') }}" alt="" class="point"
                                 id="tg-bw">
                         @endif
-                        
+
                     </div>
                 </div>
             </div>
@@ -104,6 +104,19 @@
                 </dialog>
             </section>
 
+            <!-- Modal -->
+            <div class="modal fade" id="modal_congrats" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h1 class="fs-5 text-mob">Congratulation</h1>F
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </section>
