@@ -3,8 +3,10 @@
     }
 
     #spacecraft{
-        margin-top: 100px;
-        width: 200px;
+        width: 150px;
+        position: relative;
+        bottom: 130px;
+        right: -170px;
     }
 
     .rotate-phone-text {
@@ -257,6 +259,13 @@
 
         .nes-input {
             width: 100%
+        }
+
+        #spacecraft{
+            width: 130px;
+            position: absolute;
+            bottom: 0px;
+            right: 120px;
         }
 
     }
