@@ -1,23 +1,36 @@
 id,pos_id,question
-1,1,Dimanakah mahasiswa dapat mengurus tilang absensi, serta mengurus surat-menyurat untuk kepentingan perkuliahan?
-2,1,Sebutkan pada lantai berapa ruangan TA 200 dan salah satu fungsinya!
+1,1,"Dimanakah mahasiswa dapat mengurus tilang absensi, serta mengurus surat-menyurat untuk kepentingan perkuliahan?"
+2,1,Sebutkan pada lantai berapa ruangan TA 200 dan fungsinya!
 3,1,Dimanakah ruangan diskusi mahasiswa ITDD?
 4,1,Sebutkan dimanakah ruangan TU berada dan fungsi dari TU fakultas teknik!
-5,2,Siapakah ketua jurusan dari Teknik Elektro?
-6,2,Dimanakah letak PAJ Teknik Elektro?
-7,2,Dimanakah letak Lab. Utility and Mobile Technology serta sebutkan fungsinya?
-8,3,Terdapat lab. apa saja di gedung TC (sebutkan minimal 4) ?
-9,3,Siapakah Kaprodi dari jurusan Teknik Informatika?
-10,3,Dimanakah letak PAJ Teknik Informatika dan ruangan KMM RK?
-11,4,Gedung TD biasanya digunakan oleh jurusan?
-12,4,Dimanakah letak Lab CAD/CAM/CAE serta sebutkan fungsinya!
-13,4,Siapakah Kepala Laboratorium Sistem dan Teknologi Manufaktur?
-14,5,Apakah kepanjangan dari Lab. SOPTK dan jurusan apa yang menggunakan lab tersebut?
-15,5,Apa fungsi dari ruang diskusi dan siapakah laborannya?
-16,5,Dimanakah ruangan OVO berada dan apakah fungsinya?
-17,6,Terdapat PAJ apakah di gedung TF?
-18,6,Terdapat ruangan KSM apa saja di gedung TF (sebutkan minimal 3) ?
-19,6,Sebutkan fungsi utama dari gedung TF?
-20,7,Siapakah Kaprodi dari jurusan Teknik Kimia?
-21,7,Sebutkan laboratorium yang ada pada gedung TG (minimal 4)
-22,7,Apakah fungsi dari Bengkel Glass ?
+5,1,Terdapat ruangan siapakah di TA 200?
+6,2,Siapakah ketua jurusan dari Teknik Elektro?
+7,2,Dimanakah letak PAJ Teknik Elektro?
+8,2,Dimanakah letak Lab. Utility and Mobile Technology?
+9,2,Siapakah petugas administrasi PAJ Teknik Elektro
+10,2,Sebutkan 3 Lab. yang digunakan oleh mahasiswa jurusan Teknik Elektro?
+11,3,Terdapat Lab. apa saja di gedung TC (sebutkan minimal 4)?
+12,3,Siapakah Kaprodi dari jurusan Teknik Informatika?
+13,3,Dimanakah letak PAJ Teknik Informatika dan ruangan KMM RK?
+14,3,Siapakah laboran 6 Lab. Computer yang terdapat pada gedung TC?
+15,3,Apakah fungsi dari Lab. Energi?
+16,4,Gedung TD biasanya digunakan oleh jurusan?
+17,4,Dimanakah letak Lab CAD/CAM/CAE serta sebutkan fungsinya!
+18,4,Siapakah Kepala Laboratorium Sistem dan Teknologi Manufaktur?
+19,4,Apakah kegunaan Lab. CNC (Computer Numerical Control)?
+20,4,Jurusan apakah yang biasanya menggunakan gedung TD ?
+21,5,Apakah kepanjangan dari Lab. SOPTK dan jurusan apa yang menggunakan lab tersebut?
+22,5,Apa fungsi dari ruang diskusi dan siapakah laborannya?
+23,5,Dimanakah ruangan OVO berada dan apakah fungsinya?
+24,5,Apa fungsi dari Lab. SOTPK?
+25,5,Siapakah Kepala Lab. SOTPK?
+26,6,Terdapat PAJ apakah di gedung TF?
+27,6,Terdapat ruangan KSM apa saja di gedung TF (sebutkan minimal 3)?
+28,6,Sebutkan fungsi utama dari gedung TF?
+29,6,Siapakah ketua jurusan Teknik Industri?
+30,6,Apakah tugas dari Kepala Program?
+31,7,Siapakah Kaprodi dari jurusan Teknik Kimia?
+32,7,Sebutkan laboratorium yang ada pada gedung TG (minimal 4)!
+33,7,Apakah fungsi dari Bengkel Glass?
+34,7,Apakah kepanjangan dari Lab. TBPL dan sebutkan fungsinya?
+35,7,Siapakah Kepala Lab. dari Lab. KA/KO/KF?
