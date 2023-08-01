@@ -53,7 +53,8 @@
                             <img src="{{ asset('../images/assets_gedung/bw/TG_bw.png') }}" alt="" class="point"
                                 id="tg-bw">
                         @endif
-                        <img src="{{ asset('../images/assets_spacecraft/spacecraft'.$count.'.png') }}" id="spacecraft" alt="">
+                        <img src="{{ asset('../images/assets_spacecraft/spacecraft' . $count . '.png') }}" id="spacecraft"
+                            alt="">
                     </div>
                 </div>
             </div>
@@ -103,6 +104,17 @@
 
         </div>
     </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal_congrats" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <h1 class="fs-5 text-mob">Congratulations</h1>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
 
 @section('script')
