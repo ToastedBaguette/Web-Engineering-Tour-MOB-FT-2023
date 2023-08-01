@@ -9,7 +9,8 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>MOB FT 2023</title>
+    <title>Engineering Tour MOB FT 2023</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/logo.png')}}">
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
