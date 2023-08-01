@@ -6,22 +6,26 @@
 @endsection
 
 @section('content')
-    <div class="blocker">
+    {{-- <div class="blocker">
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
         <lottie-player src="https://lottie.host/f0c83d85-3b47-4b77-990c-3245f810b85e/dguz1WhP5f.json" background="#000000"
             speed="1" style="width: 250px; height: 250px" direction="1" mode="normal" loop autoplay></lottie-player>
         <h2 class="rotate-phone-text">Please Rotate Your Phone</h2>
-    </div>
+    </div> --}}
 
     <section class="map-section">
-        <img src="{{ asset('../images/assets_gedung/awan-1.png') }}" id="awan-1" alt="">
+        <div class="space">
+            <img src="{{ asset('../images/assets_spacecraft/spacecraft'.$count.'.png') }}" id="spacecraft" alt="">
+        </div>
+        {{-- <img src="{{ asset('../images/assets_gedung/awan-1.png') }}" id="awan-1" alt="">
         <img src="{{ asset('../images/assets_gedung/awan-3.png') }}" id="awan-3" alt="">
-        <img src="{{ asset('../images/assets_gedung/awan-5.png') }}" id="awan-5" alt="">
-        <img src="{{ asset('../images/assets_gedung/bird.png') }}" id="bird-1" alt="">
+        <img src="{{ asset('../images/assets_gedung/awan-5.png') }}" id="awan-5" alt="">--}}
+        {{-- <img src="{{ asset('../images/assets_gedung/bird.png') }}" id="bird-1" alt=""> --}}
         <h1 class="title" style="z-index:5">Engineering Tour</h1>
         <div class="container-fluid my-0 my-4">
-            <div class="row">
+            <div class="row my-5">
                 <div class="col  d-flex justify-content-center">
+                    
                     <div class="map-container">
                         <img src="{{ asset('../images/assets_gedung/map_rgb_cropped.png') }}" class="map_image"
                             alt="">
@@ -53,12 +57,12 @@
                             <img src="{{ asset('../images/assets_gedung/bw/TG_bw.png') }}" alt="" class="point"
                                 id="tg-bw">
                         @endif
-                        <img src="{{ asset('../images/assets_spacecraft/spacecraft'.$count.'.png') }}" id="spacecraft" alt="">
+                        
                     </div>
                 </div>
             </div>
 
-            <div class="row  d-flex justify-content-center">
+            <div class="row  d-flex justify-content-center  my-4">
                 <div class="col d-flex justify-content-center">
                     <div class="password-wrapper d-flex justify-content-center">
                         <div class="nes-field">
@@ -103,17 +107,6 @@
 
         </div>
     </section>
-
-    <!-- Modal -->
-    <div class="modal fade" id="modal_congrats" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-body text-center">
-                    <h1 class="fs-5 text-mob">Congratulations</h1>
-                </div>
-            </div>
-        </div>
-    </div>
 @endsection
 
 @section('script')

@@ -1,271 +1,276 @@
-    body {
-        background: #57c1e5;
+body {
+    background: #57c1e5;
+}
+
+.space{
+    position: relative;
+}
+
+#spacecraft{
+    width: 130px;
+    position: absolute;
+    top: 70px;
+    left: 0px;
+    z-index: 5;
+}
+
+.rotate-phone-text {
+    font-family: 'Broken Console', sans-serif;
+}
+
+.rotate-phone-text {
+    font-family: 'Broken Console', sans-serif;
+}
+
+.map-container {
+    text-align: center;
+    position: relative;
+    width: 400px;
+    height: auto;
+    background-color: #57c1e5;
+    z-index: 0;
+    overflow-x: auto;
+}
+
+.map_image {
+    width: 450px;
+    height: auto;
+}
+
+.point {
+    position: absolute;
+}
+
+#ta-bw {
+    width: 56px;
+    height: auto;
+    bottom: 72px;
+    left: 184px;
+}
+
+#tb-bw {
+    width: 64px;
+    height: auto;
+    bottom: 93px;
+    left: 234px;
+}
+
+#tc-bw {
+    width: 68px;
+    height: auto;
+    top: 94px;
+    left: 293px;
+
+}
+
+#td-bw {
+    width: 48px;
+    height: auto;
+    top: 61px;
+    left: 308px;
+    /* z-index: 1; */
+}
+
+#te-bw {
+    width: 87px;
+    height: auto;
+    top: 58px;
+    left: 215px;
+    z-index: 1;
+}
+
+#tf-bw {
+    width: 91px;
+    height: auto;
+    bottom: 106px;
+    left: 132px;
+}
+
+#tg-bw {
+    width: 69px;
+    height: auto;
+    top: 10px;
+    left: 234px;
+}
+
+.blocker {
+    display: none;
+}
+
+.broken-console {
+    font-family: 'Broken Console', sans-serif !important;
+}
+
+.dialog-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.blocker {
+    display: none;
+}
+
+.broken-console {
+    font-family: 'Broken Console', sans-serif !important;
+}
+
+.dialog-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.nes-input {
+    width: 200px;
+    border-image-repeat: stretch !important;
+    background-clip: unset !important;
+    border-width: 6px !important;
+    height: 30px;
+
+}
+
+.nes-dialog.is-rounded,
+.nes-btn,
+.nes-textarea {
+    border-image-repeat: stretch !important;
+}
+
+.nes-btn {
+    font-family: 'Broken Console', sans-serif !important;
+    height: 30px;
+    font-size: 14px;
+    padding: 0 6px;
+}
+
+#dialog-rounded {
+    height: 400px;
+    overflow-y: auto;
+    min-width: 400px;
+    max-width: 700px;
+    overflow-y: auto;
+}
+
+#answer {
+    height: 80px;
+}
+
+#awan-1 {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    top: 20px;
+    left: 60px;
+    z-index: -1;
+    animation: awan1 2s infinite ease-in-out;
+}
+
+#awan-3 {
+    position: absolute;
+    width: 180px;
+    height: auto;
+    top: 50px;
+    right: 60px;
+    z-index: -1;
+    animation: awan1 2s infinite ease-in-out;
+}
+
+#awan-5 {
+    position: absolute;
+    width: 150px;
+    height: auto;
+    top: 50px;
+    left: 40px;
+    z-index: 2;
+    animation: awan1 2s infinite ease-in-out;
+}
+
+#bird-1 {
+    position: absolute;
+    width: 50px;
+    top: 20px;
+    left: -20px;
+    transform: translateX(-30px);
+    animation: angrybird 2s infinite linear;
+    z-index: -2;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes awan1 {
+    0% {
+        transform: translate(0, 0px);
     }
 
-    #spacecraft{
-        width: 150px;
-        position: relative;
-        bottom: 130px;
-        right: -170px;
+    50% {
+        transform: translate(0, 5px);
     }
 
-    .rotate-phone-text {
-        font-family: 'Broken Console', sans-serif;
+    100% {
+        transform: translateY(0, -0px);
+    }
+}
+
+@keyframes angrybird {
+
+    0% {
+        transform: translate(0, 0px);
     }
 
-    .map-container {
-        text-align: center;
-        position: relative;
-        width: 700px;
-        height: 417px;
-        background-color: #57c1e5;
-        z-index: -1;
+    25% {
+        transform: translate(30px, 15px);
     }
 
-    .map_image {
-        width: 700px;
-        height: 417px;
+    50% {
+        transform: translate(60px, 0px);
     }
 
-    .point {
-        position: absolute;
+    75% {
+        transform: translate(90px, 15px);
     }
 
-    #ta-bw {
-        width: 83px;
-        height: auto;
-        bottom: 113px;
-        left: 289.3px;
+    100% {
+        transform: translate(120px, -0px);
     }
+}
 
-    #tb-bw {
-        width: 100px;
-        height: auto;
-        bottom: 143px;
-        right: 236px;
-    }
-
-    #tc-bw {
-        width: 107px;
-        height: auto;
-        top: 146px;
-        right: 139px;
-        z-index: 1;
-    }
-
-    #td-bw {
-        width: 77px;
-        height: auto;
-        top: 94px;
-        right: 146px;
-        /* z-index: 1; */
-    }
-
-    #te-bw {
-        width: 129px;
-        height: auto;
-        top: 92px;
-        right: 233px;
-        z-index: 1;
-    }
-
-    #tf-bw {
-        width: 142px;
-        height: auto;
-        bottom: 165px;
-        left: 205px;
-    }
-
-    #tg-bw {
-        width: 108px;
-        height: auto;
-        top: 15px;
-        right: 228px;
-    }
-
-    .blocker {
-        display: none;
-    }
-
-    .broken-console {
-        font-family: 'Broken Console', sans-serif !important;
-    }
-
-    .dialog-menu {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .nes-input {
-        width: 400px;
-        border-image-repeat: stretch !important;
-        background-clip: unset !important;
-        border-width: 6px !important;
-        height: 40px;
-
-    }
-
-    .nes-dialog.is-rounded,
-    .nes-btn,
-    .nes-textarea {
-        border-image-repeat: stretch !important;
-    }
-
-    .nes-btn {
-        font-family: 'Broken Console', sans-serif !important;
-    }
-
-    #dialog-rounded {
-        height: 400px;
-        overflow-y: auto;
-        min-width: 400px;
-        max-width: 700px;
-        overflow-y: auto;
-    }
-
-    #answer {
-        height: 80px;
+@media screen and (orientation: portrait) {
+    #bird-1 {
+        display: none
     }
 
     #awan-1 {
-        position: absolute;
-        width: 200px;
-        height: auto;
-        top: 20px;
-        left: 60px;
-        z-index: -1;
-        animation: awan1 2s infinite ease-in-out;
+        top: 30px
     }
 
     #awan-3 {
-        position: absolute;
-        width: 180px;
-        height: auto;
-        top: 50px;
-        right: 60px;
-        z-index: -1;
-        animation: awan1 2s infinite ease-in-out;
+        top: 60px
     }
 
     #awan-5 {
+        width: 60px;
+        top: 95px;
+    }
+
+    .title {
+        margin-top: 20px;
+    }
+
+
+    .nes-input {
+        width: 100%
+    }
+
+    .space{
+        position: relative;
+    }
+
+    #spacecraft{
+        width: 130px;
         position: absolute;
-        width: 150px;
-        height: auto;
-        top: 50px;
-        left: 40px;
-        z-index: 2;
-        animation: awan1 2s infinite ease-in-out;
+        top: 70px;
+        left: 10px;
+        z-index: 5;
     }
-
-    #bird-1 {
-        position: absolute;
-        width: 50px;
-        top: 20px;
-        left: -20px;
-        transform: translateX(-30px);
-        animation: angrybird 2s infinite linear;
-        z-index: -2;
-    }
-
-    .hidden {
-        display: none;
-    }
-
-    @keyframes awan1 {
-        0% {
-            transform: translate(0, 0px);
-        }
-
-        50% {
-            transform: translate(0, 5px);
-        }
-
-        100% {
-            transform: translateY(0, -0px);
-        }
-    }
-
-    @keyframes angrybird {
-
-        0% {
-            transform: translate(0, 0px);
-        }
-
-        25% {
-            transform: translate(30px, 15px);
-        }
-
-        50% {
-            transform: translate(60px, 0px);
-        }
-
-        75% {
-            transform: translate(90px, 15px);
-        }
-
-        100% {
-            transform: translate(120px, -0px);
-        }
-    }
-
-    @media screen and (orientation: portrait) {
-        /* .map-section {
-                    display: none;
-                } */
-
-        /* Display Blocker */
-        /* .blocker {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 100vw;
-                    height: 100vh;
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    background-color: #000;
-                    z-index: 1000;
-                    color: #ffffff;
-                } */
-
-
-        #bird-1 {
-            display: none
-        }
-
-
-        #awan-1 {
-            top: 30px
-        }
-
-        #awan-3 {
-            top: 60px
-        }
-
-        #awan-5 {
-            width: 60px;
-            top: 95px;
-        }
-
-        .title {
-            margin-top: 20px;
-        }
-        
-        .map-container{
-            margin-right: 70px;
-        }
-
-
-        .nes-input {
-            width: 100%
-        }
-
-        #spacecraft{
-            width: 130px;
-            position: absolute;
-            bottom: 0px;
-            right: 120px;
-        }
-
-    }
+}
