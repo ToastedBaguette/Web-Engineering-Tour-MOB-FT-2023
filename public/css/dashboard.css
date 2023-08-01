@@ -2,109 +2,85 @@
         background: #57c1e5;
     }
 
-    .space{
-        position: relative;
-    }
-
     #spacecraft{
-        width: 130px;
-        position: absolute;
-        top: 70px;
-        left: 0px;
-        z-index: 5;
+        width: 150px;
+        position: relative;
+        bottom: 130px;
+        right: -170px;
     }
 
     .rotate-phone-text {
         font-family: 'Broken Console', sans-serif;
     }
 
-    .rotate-phone-text {
-        font-family: 'Broken Console', sans-serif;
-    }
-    
     .map-container {
         text-align: center;
         position: relative;
-        width: 400px;
-        height: auto;
+        width: 700px;
+        height: 417px;
         background-color: #57c1e5;
-        z-index: 0;
-        overflow-x: auto;
+        z-index: -1;
     }
-    
+
     .map_image {
-        width: 450px;
-        height: auto;
+        width: 700px;
+        height: 417px;
     }
-    
+
     .point {
         position: absolute;
     }
-    
+
     #ta-bw {
-        width: 56px;
+        width: 83px;
         height: auto;
-        bottom: 72px;
-        left: 184px;
+        bottom: 113px;
+        left: 289.3px;
     }
-    
+
     #tb-bw {
-        width: 64px;
+        width: 100px;
         height: auto;
-        bottom: 93px;
-        left: 234px;
+        bottom: 143px;
+        right: 236px;
     }
-    
+
     #tc-bw {
-        width: 68px;
+        width: 107px;
         height: auto;
-        top: 94px;
-        left: 293px;
-    
-    }
-    
-    #td-bw {
-        width: 48px;
-        height: auto;
-        top: 61px;
-        left: 308px;
-        /* z-index: 1; */
-    }
-    
-    #te-bw {
-        width: 87px;
-        height: auto;
-        top: 58px;
-        left: 215px;
+        top: 146px;
+        right: 139px;
         z-index: 1;
     }
-    
+
+    #td-bw {
+        width: 77px;
+        height: auto;
+        top: 94px;
+        right: 146px;
+        /* z-index: 1; */
+    }
+
+    #te-bw {
+        width: 129px;
+        height: auto;
+        top: 92px;
+        right: 233px;
+        z-index: 1;
+    }
+
     #tf-bw {
-        width: 91px;
+        width: 142px;
         height: auto;
-        bottom: 106px;
-        left: 132px;
+        bottom: 165px;
+        left: 205px;
     }
-    
+
     #tg-bw {
-        width: 69px;
+        width: 108px;
         height: auto;
-        top: 10px;
-        left: 234px;
-    }
-    
-    .blocker {
-        display: none;
-    }
-    
-    .broken-console {
-        font-family: 'Broken Console', sans-serif !important;
-    }
-    
-    .dialog-menu{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        top: 15px;
+        right: 228px;
     }
 
     .blocker {
@@ -120,28 +96,26 @@
         flex-direction: row;
         justify-content: space-between;
     }
+
     .nes-input {
-        width: 200px;
+        width: 400px;
         border-image-repeat: stretch !important;
         background-clip: unset !important;
         border-width: 6px !important;
-        height: 30px;
-    
+        height: 40px;
+
     }
-    
+
     .nes-dialog.is-rounded,
     .nes-btn,
     .nes-textarea {
         border-image-repeat: stretch !important;
     }
-    
+
     .nes-btn {
         font-family: 'Broken Console', sans-serif !important;
-        height: 30px;
-        font-size: 14px;
-        padding: 0 6px;
     }
-    
+
     #dialog-rounded {
         height: 400px;
         overflow-y: auto;
@@ -149,7 +123,7 @@
         max-width: 700px;
         overflow-y: auto;
     }
-    
+
     #answer {
         height: 80px;
     }
@@ -236,9 +210,30 @@
     }
 
     @media screen and (orientation: portrait) {
+        /* .map-section {
+                    display: none;
+                } */
+
+        /* Display Blocker */
+        /* .blocker {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100vw;
+                    height: 100vh;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    background-color: #000;
+                    z-index: 1000;
+                    color: #ffffff;
+                } */
+
+
         #bird-1 {
             display: none
         }
+
 
         #awan-1 {
             top: 30px
@@ -256,21 +251,21 @@
         .title {
             margin-top: 20px;
         }
+        
+        .map-container{
+            margin-right: 70px;
+        }
 
 
         .nes-input {
             width: 100%
         }
 
-        .space{
-            position: relative;
-        }
-
         #spacecraft{
             width: 130px;
             position: absolute;
-            top: 70px;
-            left: 10px;
-            z-index: 5;
+            bottom: 0px;
+            right: 120px;
         }
+
     }
