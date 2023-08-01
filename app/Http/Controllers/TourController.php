@@ -20,7 +20,10 @@ class TourController extends Controller
         foreach ($answers as $value) {
             array_push($pos, $value->pos_id);
         }
-        return view('dashboard', compact('pos'));
+
+        $temp = DB::table('answers')->selectRaw('COUNT(answer), pos_id')->where('user_id', $user_id)->groupBy('pos_id')->get();
+        $count = $temp->count();
+        return view('dashboard', ['pos'=>$pos, 'count'=>$count]);
     }
 
     function rekap() {

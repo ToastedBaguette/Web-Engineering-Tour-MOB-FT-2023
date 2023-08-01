@@ -18,7 +18,7 @@
         <img src="{{ asset('../images/assets_gedung/awan-3.png') }}" id="awan-3" alt="">
         <img src="{{ asset('../images/assets_gedung/awan-5.png') }}" id="awan-5" alt="">
         <img src="{{ asset('../images/assets_gedung/bird.png') }}" id="bird-1" alt="">
-        <img src="{{ asset('../images/assets_spacecraft/spacecraft.png') }}" id="spacecraft" alt="">
+        <img src="{{ asset('../images/assets_spacecraft/spacecraft'.$count.'.png') }}" id="spacecraft" alt="">
         <h1 class="title" style="z-index:5">Engineering Tour</h1>
         <div class="container-fluid my-0 my-4">
             <div class="row">
