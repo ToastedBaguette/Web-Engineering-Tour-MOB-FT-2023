@@ -1,229 +1,262 @@
-body {
-    background: #57c1e5;
-}
+    body {
+        background: #57c1e5;
+    }
 
-.rotate-phone-text {
-    font-family: 'Broken Console', sans-serif;
-}
+    #spacecraft{
+        margin-top: 100px;
+        width: 200px;
+    }
 
-.map-container {
-    text-align: center;
-    position: relative;
-    width: 400px;
-    height: auto;
-    background-color: #57c1e5;
-    z-index: 0;
-    overflow-x: auto;
-}
+    .rotate-phone-text {
+        font-family: 'Broken Console', sans-serif;
+    }
 
-.map_image {
-    width: 450px;
-    height: auto;
-}
+    .map-container {
+        text-align: center;
+        position: relative;
+        width: 700px;
+        height: 417px;
+        background-color: #57c1e5;
+        z-index: -1;
+    }
 
-.point {
-    position: absolute;
-}
+    .map_image {
+        width: 700px;
+        height: 417px;
+    }
 
-#ta-bw {
-    width: 56px;
-    height: auto;
-    bottom: 72px;
-    left: 184px;
-}
+    .point {
+        position: absolute;
+    }
 
-#tb-bw {
-    width: 64px;
-    height: auto;
-    bottom: 93px;
-    left: 234px;
-}
+    #ta-bw {
+        width: 83px;
+        height: auto;
+        bottom: 113px;
+        left: 289.3px;
+    }
 
-#tc-bw {
-    width: 68px;
-    height: auto;
-    top: 94px;
-    left: 293px;
+    #tb-bw {
+        width: 100px;
+        height: auto;
+        bottom: 143px;
+        right: 236px;
+    }
 
-}
+    #tc-bw {
+        width: 107px;
+        height: auto;
+        top: 146px;
+        right: 139px;
+        z-index: 1;
+    }
 
-#td-bw {
-    width: 48px;
-    height: auto;
-    top: 61px;
-    left: 308px;
-    /* z-index: 1; */
-}
+    #td-bw {
+        width: 77px;
+        height: auto;
+        top: 94px;
+        right: 146px;
+        /* z-index: 1; */
+    }
 
-#te-bw {
-    width: 87px;
-    height: auto;
-    top: 58px;
-    left: 215px;
-    z-index: 1;
-}
+    #te-bw {
+        width: 129px;
+        height: auto;
+        top: 92px;
+        right: 233px;
+        z-index: 1;
+    }
 
-#tf-bw {
-    width: 91px;
-    height: auto;
-    bottom: 106px;
-    left: 132px;
-}
+    #tf-bw {
+        width: 142px;
+        height: auto;
+        bottom: 165px;
+        left: 205px;
+    }
 
-#tg-bw {
-    width: 69px;
-    height: auto;
-    top: 10px;
-    left: 234px;
-}
-
-.blocker {
-    display: none;
-}
-
-.broken-console {
-    font-family: 'Broken Console', sans-serif !important;
-}
-
-.dialog-menu{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-
-
-/* @media screen and (orientation: portrait) {
-    .map-section {
-        display: none;
+    #tg-bw {
+        width: 108px;
+        height: auto;
+        top: 15px;
+        right: 228px;
     }
 
     .blocker {
+        display: none;
+    }
+
+    .broken-console {
+        font-family: 'Broken Console', sans-serif !important;
+    }
+
+    .dialog-menu {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100vw;
-        height: 100vh;
-        position: fixed;
-        top: 0;
-        left: 0;
-        background-color: #000;
-        z-index: 1000;
-        color: #ffffff;
-    }
-} */
-
-.nes-input {
-    width: 200px;
-    border-image-repeat: stretch !important;
-    background-clip: unset !important;
-    border-width: 6px !important;
-    height: 30px;
-
-}
-
-.nes-dialog.is-rounded,
-.nes-btn,
-.nes-textarea {
-    border-image-repeat: stretch !important;
-}
-
-.nes-btn {
-    font-family: 'Broken Console', sans-serif !important;
-    height: 30px;
-    font-size: 14px;
-    padding: 0 6px;
-}
-
-#dialog-rounded {
-    height: 400px;
-    overflow-y: auto;
-    min-width: 400px;
-    max-width: 700px;
-    overflow-y: auto;
-}
-
-#answer {
-    height: 80px;
-}
-
-#awan-1 {
-    position: absolute;
-    width: 200px;
-    height: auto;
-    top: 20px;
-    left: 60px;
-    z-index: -1;
-    animation: awan1 2s infinite ease-in-out;
-}
-
-#awan-3{
-    position: absolute;
-    width: 180px;
-    height: auto;
-    top: 50px;
-    right: 60px;
-    z-index: -1;
-    animation: awan1 2s infinite ease-in-out;
-}
-
-#awan-5{
-    position: absolute;
-    width: 150px;
-    height: auto;
-    top: 50px;
-    left: 40px;
-    z-index: 2;
-    animation: awan1 2s infinite ease-in-out;
-}
-
-#bird-1 {
-    position: absolute;
-    width: 50px;
-    top: 20px;
-    left: -20px;
-    transform: translateX(-30px);
-    animation: angrybird 2s infinite linear;
-    z-index: -2;
-}
-
-.hidden{
-    display: none;
-}
-
-@keyframes awan1{
-    0% {
-        transform: translate(0, 0px);
+        flex-direction: row;
+        justify-content: space-between;
     }
 
-    50% {
-        transform: translate(0, 5px);
+    .nes-input {
+        width: 400px;
+        border-image-repeat: stretch !important;
+        background-clip: unset !important;
+        border-width: 6px !important;
+        height: 40px;
+
     }
 
-    100% {
-        transform: translateY(0, -0px);
-    }
-}
-
-@keyframes angrybird {
-
-    0% {
-        transform: translate(0, 0px);
+    .nes-dialog.is-rounded,
+    .nes-btn,
+    .nes-textarea {
+        border-image-repeat: stretch !important;
     }
 
-    25%{
-        transform: translate(30px, 15px);
+    .nes-btn {
+        font-family: 'Broken Console', sans-serif !important;
     }
 
-    50% {
-        transform: translate(60px, 0px);
+    #dialog-rounded {
+        height: 400px;
+        overflow-y: auto;
+        min-width: 400px;
+        max-width: 700px;
+        overflow-y: auto;
     }
 
-    75%{
-        transform: translate(90px, 15px);
+    #answer {
+        height: 80px;
     }
 
-    100% {
-        transform: translate(120px, -0px);
+    #awan-1 {
+        position: absolute;
+        width: 200px;
+        height: auto;
+        top: 20px;
+        left: 60px;
+        z-index: -1;
+        animation: awan1 2s infinite ease-in-out;
     }
-}
+
+    #awan-3 {
+        position: absolute;
+        width: 180px;
+        height: auto;
+        top: 50px;
+        right: 60px;
+        z-index: -1;
+        animation: awan1 2s infinite ease-in-out;
+    }
+
+    #awan-5 {
+        position: absolute;
+        width: 150px;
+        height: auto;
+        top: 50px;
+        left: 40px;
+        z-index: 2;
+        animation: awan1 2s infinite ease-in-out;
+    }
+
+    #bird-1 {
+        position: absolute;
+        width: 50px;
+        top: 20px;
+        left: -20px;
+        transform: translateX(-30px);
+        animation: angrybird 2s infinite linear;
+        z-index: -2;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    @keyframes awan1 {
+        0% {
+            transform: translate(0, 0px);
+        }
+
+        50% {
+            transform: translate(0, 5px);
+        }
+
+        100% {
+            transform: translateY(0, -0px);
+        }
+    }
+
+    @keyframes angrybird {
+
+        0% {
+            transform: translate(0, 0px);
+        }
+
+        25% {
+            transform: translate(30px, 15px);
+        }
+
+        50% {
+            transform: translate(60px, 0px);
+        }
+
+        75% {
+            transform: translate(90px, 15px);
+        }
+
+        100% {
+            transform: translate(120px, -0px);
+        }
+    }
+
+    @media screen and (orientation: portrait) {
+        /* .map-section {
+                    display: none;
+                } */
+
+        /* Display Blocker */
+        /* .blocker {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100vw;
+                    height: 100vh;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    background-color: #000;
+                    z-index: 1000;
+                    color: #ffffff;
+                } */
+
+
+        #bird-1 {
+            display: none
+        }
+
+
+        #awan-1 {
+            top: 30px
+        }
+
+        #awan-3 {
+            top: 60px
+        }
+
+        #awan-5 {
+            width: 60px;
+            top: 95px;
+        }
+
+        .title {
+            margin-top: 20px;
+        }
+        
+        .map-container{
+            margin-right: 70px;
+        }
+
+
+        .nes-input {
+            width: 100%
+        }
+
+    }
