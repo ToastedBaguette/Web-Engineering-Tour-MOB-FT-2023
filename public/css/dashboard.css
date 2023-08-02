@@ -42,55 +42,54 @@ body {
 }
 
 #ta-bw {
-    width: 56px;
+    width: 51px;
     height: auto;
-    bottom: 72px;
-    left: 184px;
+    bottom: 75px;
+    left: 189px;
 }
 
 #tb-bw {
-    width: 64px;
+    width: 58px;
     height: auto;
-    bottom: 93px;
-    left: 234px;
+    bottom: 96px;
+    left: 232px;
 }
 
 #tc-bw {
-    width: 68px;
+    width: 95px;
     height: auto;
-    top: 94px;
-    left: 293px;
-
+    top: 98px;
+    left: 297px;
 }
 
 #td-bw {
-    width: 48px;
+    width: 44px;
     height: auto;
-    top: 61px;
-    left: 308px;
+    top: 92px;
+    left: 312px;
     /* z-index: 1; */
 }
 
 #te-bw {
-    width: 87px;
+    width: 73px;
     height: auto;
-    top: 58px;
-    left: 215px;
+    top: 75px;
+    left: 203px;
     z-index: 1;
 }
 
 #tf-bw {
-    width: 91px;
+    width: 95px;
     height: auto;
-    bottom: 106px;
-    left: 132px;
+    bottom: 117px;
+    left: 123px;
 }
 
 #tg-bw {
-    width: 69px;
+    width: 80px;
     height: auto;
-    top: 10px;
-    left: 234px;
+    top: 0px;
+    left: 225px;
 }
 
 .blocker {
