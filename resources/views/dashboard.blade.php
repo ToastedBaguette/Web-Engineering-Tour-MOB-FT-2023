@@ -16,7 +16,7 @@
 
     <section class="map-section" id="ini-map">
         <div class="space">
-            <img src="{{ asset('../images/assets_spacecraft/spacecraft' . $count . '.png') }}" id="spacecraft" alt="">
+            <img src="{{ asset('../images/assets_spacecraft/Spacecraft' . $count . '.png') }}" id="spacecraft" alt="">
         </div>
         {{-- <img src="{{ asset('../images/assets_gedung/awan-1.png') }}" id="awan-1" alt="">
         <img src="{{ asset('../images/assets_gedung/awan-3.png') }}" id="awan-3" alt="">
