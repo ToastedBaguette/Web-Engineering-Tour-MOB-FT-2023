@@ -43,6 +43,7 @@
         .title {
             font-family: '04b', sans-serif;
             text-align: center;
+            /* color: #57c1e5; */
             color: #40128b;
             font-size: 36px;
         }

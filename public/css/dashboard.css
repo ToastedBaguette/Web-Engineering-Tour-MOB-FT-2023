@@ -1,6 +1,22 @@
 body {
-    background: #57c1e5;
+    background: #40128b;
 }
+.title-depan {
+    font-family: '04b', sans-serif;
+    text-align: center;
+    color: #fff;
+    font-size: 36px;
+    text-shadow: -3px 3px #dd58d6;
+}
+
+.title-depan {
+    font-family: '04b', sans-serif;
+    text-align: center;
+    color: #fff;
+    font-size: 36px;
+    text-shadow: -3px 3px #dd58d6;
+}
+
 
 .space{
     position: relative;
@@ -12,6 +28,7 @@ body {
     top: 70px;
     left: 0px;
     z-index: 5;
+    filter: drop-shadow(0px 0px 5px #fff);
 }
 
 .rotate-phone-text {
@@ -27,7 +44,7 @@ body {
     position: relative;
     width: 400px;
     height: auto;
-    background-color: #57c1e5;
+    background-color: #40128b;
     z-index: 0;
     overflow-x: auto;
 }
@@ -90,20 +107,6 @@ body {
     height: auto;
     top: 0px;
     left: 225px;
-}
-
-.blocker {
-    display: none;
-}
-
-.broken-console {
-    font-family: 'Broken Console', sans-serif !important;
-}
-
-.dialog-menu{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 }
 
 .blocker {
