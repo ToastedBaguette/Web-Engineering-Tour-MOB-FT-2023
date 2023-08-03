@@ -82,28 +82,26 @@
 
             </div>
 
-            <section>
-                <dialog class="nes-dialog is-rounded" id="dialog-question">
-                    {{-- <form method="dialog"> --}}
-                    <p class="title" id="titles">Ini Judul</p>
-                    <p id="quest">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, soluta eaque? Vero
-                        quis aut
-                        voluptate. Architecto sequi tempore quos, dolore delectus ipsa unde vel voluptates voluptatem
-                        dolor? Corrupti, magni expedita.</p>
-                    <textarea id="answer" class="nes-textarea"></textarea>
-                    <div class="dialog-menu">
-                        <div class="back-next">
-                            <button class="nes-btn hidden" id="back" onclick="back()">Back</button>
-                            <button class="nes-btn" id="next" onclick="next()">Next</button>
-                        </div>
-                        <div class="confirm-section">
-                            <button class="nes-btn is-primary hidden" id="confirm" onclick="submit()">Confirm</button>
-                        </div>
-
+            <dialog class="nes-dialog is-rounded" id="dialog-question">
+                {{-- <form method="dialog"> --}}
+                <p class="title" id="titles">Ini Judul</p>
+                <p id="quest">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, soluta eaque? Vero
+                    quis aut
+                    voluptate. Architecto sequi tempore quos, dolore delectus ipsa unde vel voluptates voluptatem
+                    dolor? Corrupti, magni expedita.</p>
+                <textarea id="answer" class="nes-textarea"></textarea>
+                <div class="dialog-menu">
+                    <div class="back-next">
+                        <button class="nes-btn hidden" id="back" onclick="back()">Back</button>
+                        <button class="nes-btn" id="next" onclick="next()">Next</button>
                     </div>
-                    {{-- </form> --}}
-                </dialog>
-            </section>
+                    <div class="confirm-section">
+                        <button class="nes-btn is-primary hidden" id="confirm" onclick="submit()">Confirm</button>
+                    </div>
+
+                </div>
+                {{-- </form> --}}
+            </dialog>
 
             <!-- Modal -->
             {{-- <div class="modal fade" id="modal_congrats" tabindex="-1" aria-hidden="true">
@@ -119,17 +117,15 @@
                 </div>
             </div> --}}
 
-            <section>
-                <dialog class="nes-dialog is-rounded" id="modal_congrats">
-                    <p class="title">Congrats</p>
-                    <p id="quest">Cie sudah selesai kerjain Engineering Tour.</p>
-                    <div class="dialog-menu">
-                        <div class="confirm-section">
-                            <button class="nes-btn is-primary" onclick="closeModal1()">Close</button>
-                        </div>
+            <dialog class="nes-dialog is-rounded" id="modal_congrats">
+                <p class="title">Congrats</p>
+                <p id="quest">Cie sudah selesai kerjain Engineering Tour.</p>
+                <div class="dialog-menu">
+                    <div class="confirm-section">
+                        <button class="nes-btn is-primary" onclick="closeModal1()">Close</button>
                     </div>
-                </dialog>
-            </section>
+                </div>
+            </dialog>
 
         </div>
     </section>

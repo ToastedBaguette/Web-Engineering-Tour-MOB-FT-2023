@@ -34,7 +34,9 @@ Route::group(['middleware' => ['auth', 'student']],
 // Admin
 Route::group(['middleware' => ['auth', 'admin']],
     function () {
-        Route::get('/rekap', 'TourController@rekap')->name('rekap');
+        // Route::get('/rekap', 'TourController@rekap')->name('rekap');
+        Route::get('/rekap', 'TourController@rekap2')->name('rekap2');
         Route::post('/change-group', 'TourController@changeGroup')->name('change.group');
+        Route::post('/change-student', 'TourController@changeStudent')->name('change.student');
     }
 );

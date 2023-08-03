@@ -45,18 +45,7 @@ class TourController extends Controller
         return view('rekap', compact('groups','students'));
     }
 
-    function changeGroup(Request $request) {
-        $group = $request->group;
-        if($group == '--Show All--'){
-            $students = User::where('role','Student')->get();
-        }else{
-            $students = User::where('role','Student')->where('group',$group)->get();
-        }
-        // var_dump($students[0]);
-        return response()->json(array(
-            'students' => $students
-        ), 200);
-    }
+    
 
     function checkPass(Request $request) {
         $pass = $request->pass;
@@ -108,5 +97,34 @@ class TourController extends Controller
         ), 200);
     }
 
+    function rekap2() {
+        $groups = User::where('role','Student')->orderBy('group')->distinct()->get('group');
 
+        // $ans = User::with('answers')->get();
+        // dd($ans[2]->answers[1]->pivot->answer);
+        // dd($ans);
+        // $students = User::first();
+        // $pos = Pos::where("password","AAAAA")->question()->first();
+        // $answers = $students[0]->answers()->get();
+        // dd($answers[3]->pivot->answer);
+        return view('rekap2', compact('groups'));
+    }
+
+    function changeGroup(Request $request) {
+        $group = $request->group;
+        $students = User::where('role','Student')->where('group',$group)->get();
+        
+        return response()->json(array(
+            'students' => $students
+        ), 200);
+    }
+
+    function changeStudent(Request $request) {
+        $student_id = $request->student_id;
+        $answers = DB::table('answers')->where('user_id', $student_id)->orderBy('question_id')->get();
+
+        return response()->json(array(
+            'answers' => $answers
+        ), 200);
+    }
 }
