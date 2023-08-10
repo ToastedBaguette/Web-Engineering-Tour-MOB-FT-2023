@@ -171,10 +171,10 @@
                         pos = data.pos
                         alert("You are in " + pos)
                         document.getElementById('dialog-question').showModal()
-                        $('#answer').focus()
                         $('#titles').text(pos + " (" + (current + 1) + ")")
                         questions = data.questions
                         $('#quest').text(questions[current])
+                        $('#answer').focus()
                     } else if (data.msg == "INVALID") {
                         $('#input-password').val("")
                         $('#input-password').focus()
