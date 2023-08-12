@@ -58,7 +58,7 @@
                             <img src="{{ asset('../images/assets_gedung/bw/TG_bw.png') }}" alt="" class="point"
                                 id="tg-bw">
                         @endif
-
+                        <img src="{{ asset('../images/checkpoint.png') }}" class="check-tf" id="checkpoint" alt="">
                     </div>
                 </div>
             </div>
