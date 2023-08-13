@@ -23,7 +23,8 @@ class TourController extends Controller
 
         $temp = DB::table('answers')->selectRaw('COUNT(answer), pos_id')->where('user_id', $user_id)->groupBy('pos_id')->get();
         $count = $temp->count();
-        return view('dashboard', ['pos'=>$pos, 'count'=>$count]);
+        $current_pos = Auth::user()->current_pos;
+        return view('dashboard', compact('pos', 'count', 'current_pos'));
     }
 
     function rekap() {
@@ -77,7 +78,7 @@ class TourController extends Controller
     }
 
     function submitAnswers(Request $request){
-        $user_id = Auth::user()->id;
+        $user = Auth::user();
         $pass = $request->pass;
         $answers = $request->answers;
         $pos = Pos::where("password",$pass)->first();
@@ -85,12 +86,14 @@ class TourController extends Controller
 
         foreach ($questions as $key => $value) {
             DB::table('answers')->insert([
-                "user_id" => $user_id,
+                "user_id" => $user->id,
                 "question_id" => $value->id,
                 "pos_id" => $pos->id,
                 "answer" => $answers[$key]
             ]);
         }
+
+        DB::table('users')->where('id', $user->id)->update(['current_pos' => $pos->id]);
 
         return response()->json(array(
             'msg' => "Congratulations, you have finished " . $pos->name

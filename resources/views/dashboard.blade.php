@@ -58,7 +58,7 @@
                             <img src="{{ asset('../images/assets_gedung/bw/TG_bw.png') }}" alt="" class="point"
                                 id="tg-bw">
                         @endif
-
+                        <img src="{{ asset('../images/checkpoint.png') }}" class="check-tf" id="checkpoint" alt="">
                     </div>
                 </div>
             </div>
@@ -171,10 +171,10 @@
                         pos = data.pos
                         alert("You are in " + pos)
                         document.getElementById('dialog-question').showModal()
-                        $('#answer').focus()
                         $('#titles').text(pos + " (" + (current + 1) + ")")
                         questions = data.questions
                         $('#quest').text(questions[current])
+                        $('#answer').focus()
                     } else if (data.msg == "INVALID") {
                         $('#input-password').val("")
                         $('#input-password').focus()

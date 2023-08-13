@@ -59,10 +59,10 @@ body {
 }
 
 #ta-bw {
-    width: 51px;
+    width: 52px;
     height: auto;
-    bottom: 75px;
-    left: 189px;
+    bottom: 74px;
+    left: 188px;
 }
 
 #tb-bw {
@@ -98,7 +98,7 @@ body {
 #tf-bw {
     width: 95px;
     height: auto;
-    bottom: 117px;
+    bottom: 116px;
     left: 123px;
 }
 
@@ -107,6 +107,18 @@ body {
     height: auto;
     top: 0px;
     left: 225px;
+}
+
+#checkpoint{
+    position: absolute;
+
+    width: 30px;
+    z-index: 3;
+}
+
+.check-tf{
+    top: 177px;
+    left: 131px;
 }
 
 .blocker {
