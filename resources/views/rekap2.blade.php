@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('css')
+
     <style type="text/css">
         #rekap-section {
             color: #ffffff;
@@ -10,23 +11,9 @@
             color: #ffffff;
         }
 
-        .no-soal{
-            width: 400px;
-        }
-
-        .table-responsive{
-            width: 100%;
-            max-height: 700px;
-        }
-
-        .table{
-            width: 9000px;
-            
-        }
-
-        .table-dark{
-            position: sticky;
-            top: 0;
+        .card{
+            margin-bottom: 16px;
+            max-width: 100%;
         }
 
     </style>
@@ -38,30 +25,60 @@
             <h1 class="title">Rekap</h1>
         </div>
         <div class="container-fluid px-5">
-            
-            <label for="select-team">Kelompok :</label>
-            <select name="select-team" id="select-team" onchange="changeGroup()">
-                <option value="" disabled selected>--Pilih Kelompok--</option>
-                @foreach ($groups as $group)
-                    <option value="{{ $group->group }}">{{ $group->group }}</option>
-                @endforeach
-            </select>
+            <div class="row">
+                <div class="col-5 text-end col-sm-6">
+                    <label for="select-team">Kelompok :</label>
+                </div>
+                <div class="col-7 col-sm-6">
+                     {{-- Team Select --}}
+                     <div class="team-select-section">
+                        <select name="select-team" id="select-team" class="select2 w-100" onchange="changeGroup()">
+                            <option value="" disabled selected>--Pilih Kelompok--</option>
+                            @foreach ($groups as $group)
+                            <option value="{{ $group->group }}">{{ $group->group }}</option>
+                        @endforeach
+                        </select>
+                    </div>
+                    {{-- <select name="select-team" id="select-team" onchange="changeGroup()">
+                        <option value="" disabled selected>--Pilih Kelompok--</option>
+                        @foreach ($groups as $group)
+                            <option value="{{ $group->group }}">{{ $group->group }}</option>
+                        @endforeach
+                    </select> --}}
+                </div>
+            </div>
+            <div class="row my-2">
+                <div class="col-5 text-end col-sm-6">
+                    <label for="select-student">Mahasiswa :</label>
 
-            <label for="select-student">Mahasiswa :</label>
-            <select name="select-student" id="select-student" onchange="changeStudent()">
-                <option value="" disabled selected>--Pilih Mahasiswa--</option>
-            </select>
+                </div>
+                <div class="col-7 col-sm-6">
+                    <select name="select-student" id="select-student" class="select2" onchange="changeStudent()">
+                        <option value="" disabled selected>--Pilih Mahasiswa--</option>
+                    </select>
+                </div>
+            </div> 
+
+            
 
         </div>
 
         <div class="m-5" id="answers">
-            
+            {{-- <div class="card">
+                <div class="card-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quis repudiandae iure veritatis! Tempora repellat alias veritatis ea veniam modi dolor quisquam, sit doloremque, dolore tenetur soluta quaerat molestias odit.
+                </div>
+            </div> --}}
         </div>
     </section>
 @endsection
 
 @section('script')
+{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> --}}
 <script type="text/javascript">
+    $(document).ready(function() {
+        $('.select2').select2();
+    });
     const changeGroup = () => {
         let group = $('#select-team').val()
         $('#select-student').html("<option value='' disabled selected>--Pilih Mahasiswa--</option>")
@@ -106,7 +123,8 @@
                     }
 
                     if((i+4) % 5 == 0){
-                        $("#answers").append("<h3>" + gedungs[Math.floor(i/5)] + "</h3>")
+                        $('#answers').append('<div class="card"><div class="card-body" id="gedung-'+Math.floor(i/5)+'">')
+                        $("#gedung-"+Math.floor(i/5)).append("<h3>" + gedungs[Math.floor(i/5)] + "</h3>")
 
                     }
 
@@ -114,13 +132,17 @@
                     data.answers.forEach(a => {
                         if(a.question_id == i){
                             valid = true
-                            $("#answers").append("<p>" + nomor + ". " + a.answer + "</p>")
+                            $("#gedung-"+Math.floor(i/5)).append("<p>" + nomor + ". " + a.answer + "</p>")
                         }
                     })
+                    // $("#answers").append('</div></div>')
 
                     if(!valid){
-                        $("#answers").append("<p>" + nomor + ". No answer" + "</p>")
+                        $("#gedung-"+Math.floor(i/5)).append("<p>" + nomor + ". No answer" + "</p>")
+                        // $("#gedung-"+Math.floor(i/5)).append('</div></div>')
                     }
+                   
+
                 }
 
 

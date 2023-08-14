@@ -22,8 +22,10 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
+    {{-- Bootstrap Select --}}
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     
-
     <style type="text/css">
         @import url('https://fonts.cdnfonts.com/css/04b30');
         @import url('https://fonts.cdnfonts.com/css/broken-console');
@@ -133,5 +135,10 @@
         </main>
     </div>
 </body>
+<script>
+    $(document).ready(function() {
+        $('.select2').select2();
+    });
+</script>
 
 </html>

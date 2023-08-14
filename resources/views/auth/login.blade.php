@@ -3,6 +3,11 @@
 @section('content')
 <link href="{{ asset('css/login.css') }}" rel="stylesheet">
 <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+<style>
+    main{
+        width: 100% !important;
+    }
+</style>
 
 <div class="container">
     <div class="row justify-content-center">
@@ -16,7 +21,7 @@
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
-                        <div class="form-group row">
+                        <div class="form-group row mb-1">
                             <label for="username" class="col-md-4 col-form-label text-md-right">{{ __('Username') }}</label>
 
                             <div class="col-md-6">

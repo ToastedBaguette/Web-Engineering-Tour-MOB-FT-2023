@@ -22,7 +22,7 @@
         <img src="{{ asset('../images/assets_gedung/awan-3.png') }}" id="awan-3" alt="">
         <img src="{{ asset('../images/assets_gedung/awan-5.png') }}" id="awan-5" alt=""> --}}
         {{-- <img src="{{ asset('../images/assets_gedung/bird.png') }}" id="bird-1" alt=""> --}}
-        <h1 class="title-depan" style="z-index:5">Engineering Tour</h1>
+        <h1 class="title-depan" style="z-index:5">Engineering Tour {{$current_pos}}</h1>
         <div class="container-fluid my-0 my-4">
             <div class="row my-5">
                 <div class="col  d-flex justify-content-center">
@@ -58,7 +58,28 @@
                             <img src="{{ asset('../images/assets_gedung/bw/TG_bw.png') }}" alt="" class="point"
                                 id="tg-bw">
                         @endif
-                        <img src="{{ asset('../images/checkpoint.png') }}" class="check-tf" id="checkpoint" alt="">
+
+                        @if($current_pos==1)
+                        <img src="{{ asset('../images/checkpoint.png') }}" class="check-ta" id="checkpoint" alt=""> 
+                        @endif
+                        @if($current_pos==2)
+                        <img src="{{ asset('../images/checkpoint.png') }}" class="check-tb" id="checkpoint" alt=""> 
+                        @endif
+                        @if($current_pos==3)
+                        <img src="{{ asset('../images/checkpoint.png') }}" class="check-tc" id="checkpoint" alt=""> 
+                        @endif
+                        @if($current_pos==4)
+                        <img src="{{ asset('../images/checkpoint.png') }}" class="check-td" id="checkpoint" alt=""> 
+                        @endif
+                        @if($current_pos==5)
+                        <img src="{{ asset('../images/checkpoint.png') }}" class="check-te" id="checkpoint" alt=""> 
+                        @endif
+                        @if($current_pos==6)
+                        <img src="{{ asset('../images/checkpoint.png') }}" class="check-tf" id="checkpoint" alt=""> 
+                        @endif
+                        @if($current_pos==7)
+                        <img src="{{ asset('../images/checkpoint.png') }}" class="check-tg" id="checkpoint" alt=""> 
+                        @endif
                     </div>
                 </div>
             </div>

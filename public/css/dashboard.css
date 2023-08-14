@@ -111,14 +111,38 @@ body {
 
 #checkpoint{
     position: absolute;
-
-    width: 30px;
+    width: 25px;
     z-index: 3;
+    filter: drop-shadow(0px 0px 2px #FFFFFF);
 }
 
+.check-ta{
+    top: 171px;
+    left: 191px;
+}
+.check-tb{
+    top: 125px;
+    left: 243px;
+}
+.check-tc{
+    top: 118px;
+    left: 304px;
+}
+.check-td{
+    top: 75px;
+    left: 328px;
+}
+.check-te{
+    top: 59px;
+    left: 224px;
+}
 .check-tf{
     top: 177px;
     left: 131px;
+}
+.check-tg{
+    top: 2px;
+    left: 276px;
 }
 
 .blocker {
