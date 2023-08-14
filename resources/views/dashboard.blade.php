@@ -22,7 +22,7 @@
         <img src="{{ asset('../images/assets_gedung/awan-3.png') }}" id="awan-3" alt="">
         <img src="{{ asset('../images/assets_gedung/awan-5.png') }}" id="awan-5" alt=""> --}}
         {{-- <img src="{{ asset('../images/assets_gedung/bird.png') }}" id="bird-1" alt=""> --}}
-        <h1 class="title-depan" style="z-index:5">Engineering Tour {{$current_pos}}</h1>
+        <h1 class="title-depan" style="z-index:5">Engineering Tour</h1>
         <div class="container-fluid my-0 my-4">
             <div class="row my-5">
                 <div class="col  d-flex justify-content-center">
