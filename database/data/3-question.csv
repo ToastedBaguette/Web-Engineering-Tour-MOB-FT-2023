@@ -9,7 +9,8 @@ id,pos_id,question
 8,2,Apakah fungsi dari ruang tugas akhir?
 9,2,Siapakah petugas administrasi PAJ Teknik Elektro?
 10,2,Sebutkan 3 Lab. yang digunakan oleh mahasiswa jurusan Teknik Elektro?
-11,3,Apa sajakah laboratorium yang digunakan oleh jurusan teknik elektro yang terdapat di gedung TC?
+"11,3,Apa sajakah laboratorium yang digunakan oleh jurusan teknik elektro yang terdapat di
+gedung TC ? Sebutkan minimal 4!"
 12,3,Siapakah Kaprodi dari jurusan Teknik Informatika?
 13,3,Dimanakah letak PAJ Teknik Informatika dan ruangan KMM RK?
 14,3,Siapakah laboran dari Labotorium yang digunakan oleh mahasiswa Teknik Informatika yang terdapat pada gedung TC?
@@ -25,10 +26,10 @@ id,pos_id,question
 24,5,Apa fungsi dari Lab. SOTPK?
 25,5,Siapakah Kepala Lab. SOTPK?
 26,6,Terdapat PAJ apakah di gedung TF?
-27,6,Terdapat ruangan KSM apa saja di gedung TF (sebutkan minimal 3)?
+27,6,Terdapat ruangan KSM apa saja di gedung TF? Sebutkan minimal 3!
 28,6,Sebutkan fungsi utama dari gedung TF?
 29,6,Siapakah ketua jurusan Teknik Industri?
-30,6,Apakah tugas dari Kepala Program Jurusan?
+30,6,Apakah tugas dari Kepala Program Studi?
 31,7,Siapakah Kaprodi dari jurusan Teknik Kimia?
 32,7,Sebutkan laboratorium yang ada pada gedung TG (minimal 4)!
 33,7,Apakah fungsi dari Bengkel Glass?
