@@ -124,25 +124,27 @@
 
                     if((i+4) % 5 == 0){
                         $('#answers').append('<div class="card"><div class="card-body" id="gedung-'+Math.floor(i/5)+'">')
-                        $("#gedung-"+Math.floor(i/5)).append("<h3>" + gedungs[Math.floor(i/5)] + "</h3>")
 
+                        $("#gedung-"+Math.floor(i/5)).append("<h3>" + gedungs[Math.floor(i/5)] + "</h3>")
                     }
 
                     let valid = false
+                    let wkwk = i
+                    if(i%5 == 0){
+                        wkwk -=1
+                    }
                     data.answers.forEach(a => {
                         if(a.question_id == i){
                             valid = true
-                            $("#gedung-"+Math.floor(i/5)).append("<p>" + nomor + ". " + a.answer + "</p>")
+                            
+                            $("#gedung-"+Math.floor(wkwk/5)).append("<p>" + nomor + ". " + a.answer + "</p>")
+                            // $("#answers").append("<p>" + nomor + ". " + a.answer + "</p>")
                         }
                     })
-                    // $("#answers").append('</div></div>')
 
                     if(!valid){
-                        $("#gedung-"+Math.floor(i/5)).append("<p>" + nomor + ". No answer" + "</p>")
-                        // $("#gedung-"+Math.floor(i/5)).append('</div></div>')
+                        $("#gedung-"+Math.floor(wkwk/5)).append("<p>" + nomor + ". No answer" + "</p>")
                     }
-                   
-
                 }
 
 
